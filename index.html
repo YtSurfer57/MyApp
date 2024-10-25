@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadi's Application</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <div id="intro" class="section visible">
+        <h1>Welcome to Aadi's Application!</h1>
+		<br><h1>v1.0</h1>
+        <p>This code was produced by Aadi to convince his parents to buy something. The html file and css file were made by Aadi. The javascript was made with google and ChatGPT and the errors in the code were fixed by ChatGPT.</p>
+        <p>The html code currently has 550 lines of code. <br> The css code currently has 106 lines of code. <br> The javascript code currently has 162 lines of code.</p>
+		<button onclick="showParentOptions()">Continue</button>
+    </div>
+
+    <div id="parent-options" class="section">
+        <h2>Choose an option:</h2>
+        <button onclick="checkPasswordForMom()">Mom</button>
+        <button onclick="checkPasswordForDad()">Dad</button>
+    </div>
+
+    <div id="mom-options" class="section">
+        <h2>You have confirmed your identity as my Mom. Now choose from the following options:</h2>
+        <button>2000Rs For computer</button>
+        <br>
+        <button onclick="showBackExit()">Go Back or Exit</button>
+    </div>
+
+    <div id="dad-options" class="section">
+        <h2>You have confirmed your identity as my Dad. Now choose from the following options:</h2>
+        <button onclick="showOptions()">Computer</button>
+        <br>
+        <button onclick="showBackExit()">Go Back or Exit</button>
+    </div>
+	
+	<div id="navigation-buttons" class="section">
+    <button onclick="showCPUComparison()">CPU Table</button>
+    <button onclick="showGPUComparison()">GPU Table</button>
+    <button onclick="showRamComparison()">RAM Table</button>
+    <button onclick="showMotherboardComparison()">Motherboard Table</button>
+    <button onclick="showSsdComparison()">SSD Table</button>
+    <button onclick="showInternetSpeedComparison()">Internet Speed Table</button>
+    <button onclick="showEndingPage()">Written Text</button>
+    <button onclick="showDadOptions()">Back to Dad Options</button>
+</div>
+
+    <div id="gpu-comparison" class="section">
+        <h2>GPU Comparison Table</h2>
+        <table>
+    <thead>
+        <tr>
+            <th>Specification</th>
+            <th>RX 7600 (New)</th>
+            <th>GeForce MX250 (Current)</th>
+            <th>Why RX 7600 is better</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Architecture</td>
+            <td>RDNA 3</td>
+            <td>Pascal</td>
+            <td>RDNA 3 is a newer and better architecture</td>
+        </tr>
+        <tr>
+            <td>CUDA Cores</td>
+            <td>2048 Stream Processors</td>
+            <td>384</td>
+            <td>Much higher core count increases speed greatly</td>
+        </tr>
+        <tr>
+            <td>Base Clock Speed</td>
+            <td>1720 MHz</td>
+            <td>1518 MHz</td>
+            <td>New GPU has a higher base clock</td>
+        </tr>
+        <tr>
+            <td>Boost Clock Speed</td>
+            <td>2655 MHz</td>
+            <td>1582 MHz</td>
+            <td>New GPU has a higher boost clock, giving more speed</td>
+        </tr>
+        <tr>
+            <td>Virtual RAM</td>
+            <td>8 GB GDDR6</td>
+            <td>2 GB GDDR5</td>
+            <td>4x VRAM allows handling of higher graphics</td>
+        </tr>
+        <tr>
+            <td>Memory Interface</td>
+            <td>128-bit</td>
+            <td>64-bit</td>
+            <td>Wider memory interface allows faster data transfer</td>
+        </tr>
+        <tr>
+            <td>Memory Bandwidth</td>
+            <td>288 GB/s</td>
+            <td>48 GB/s</td>
+            <td>More memory bandwidth allows more data transfer through the GPU</td>
+        </tr>
+        <tr>
+            <td>Ray Tracing Cores</td>
+            <td>32</td>
+            <td>None</td>
+            <td>Feature not needed for me</td>
+        </tr>
+        <tr>
+            <td>FSR Support</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>FSR is a AI upscaling tech that improves performance while keeping graphics same</td>
+        </tr>
+    </tbody>
+</table>
+
+        <div style="margin-top: 20px;">
+		<button onclick="showCPUComparison()">Next (CPU)</button>
+		<button onclick="showOptions()">Back to options list</button>
+        <button onclick="showDadOptions()">Back to your Options</button>
+		</div>
+    </div>
+
+    <div id="cpu-comparison" class="section">
+        <h2>CPU Comparison Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Specification</th>
+                    <th>i5-12400F (New)</th>
+                    <th>i7-8565U (Current)</th>
+                    <th>Why i5-12400f is better</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Architecture</td>
+                    <td>Alder Lake</td>
+                    <td>Whiskey Lake</td>
+                    <td>Newer architecture has better efficiency and performance</td>
+                </tr>
+                <tr>
+                    <td>Cores / Threads</td>
+                    <td>6 Cores / 12 Threads</td>
+                    <td>4 Cores / 8 Threads</td>
+                    <td>More cores and threads for more heavy multitasking</td>
+                </tr>
+                <tr>
+                    <td>Base Clock Speed</td>
+                    <td>2.5 GHz</td>
+                    <td>1.8 GHz</td>
+                    <td>Higher base clock for better performance on default settings</td>
+                </tr>
+                <tr>
+                    <td>Boost Clock Speed</td>
+                    <td>4.4 GHz</td>
+                    <td>4.6 GHz</td>
+                    <td>Current has higher but boosting is not required</td>
+                </tr>
+                <tr>
+                    <td>TDP (Power Consumption)</td>
+                    <td>65W</td>
+                    <td>15W</td>
+                    <td>New cpu will require more power</td>
+                </tr>
+                <tr>
+                    <td>Cache (L3)</td>
+                    <td>18 MB</td>
+                    <td>8 MB</td>
+                    <td>More cache for faster access to frequently used data</td>
+                </tr>
+                <tr>
+                    <td>Integrated Graphics</td>
+                    <td>None</td>
+                    <td>Intel UHD Graphics 620</td>
+                    <td>New needs separate GPU which we have (RTX 3060)</td>
+                </tr>
+            </tbody>
+        </table>
+		<div style="margin-top: 20px;">
+		<button onclick="showMotherboardComparison()">Next (Motherboard)</button> <!-- Added Next button -->
+        <button onclick="showGPUComparison()">Previous (GPU)</button>
+		<button onclick="showOptions()">Back to options list</button>
+		<button onclick="showDadOptions()">Back to your Options</button>
+		</div>
+    </div>
+	
+	<div id="motherboard-comparison" class="section">
+    <h1>Motherboard Comparison</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Specification</th>
+                <th>B760M-E (New)</th>
+                <th>LNVNB161216 (Current)</th>
+                <th>Why B760M-E is better</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Form Factor</td>
+                <td>Micro-ATX</td>
+                <td>Micro-ATX</td>
+                <td>Both motherboards are same size but New one has better design</td>
+            </tr>
+            <tr>
+                <td>Socket Type</td>
+                <td>LGA 1700</td>
+                <td>LGA 1200</td>
+                <td>LGA 1700 supports newer CPU for upgradability</td>
+            </tr>
+            <tr>
+                <td>Memory Support</td>
+                <td>DDR5 Memory</td>
+                <td>DDR4 Memory</td>
+                <td>DDR5 is new gen RAM 1.5x faster than DDR4</td>
+            </tr>
+            <tr>
+                <td>PCIe Support</td>
+                <td>PCIe 4.0 x16 Slot</td>
+                <td>PCIe 3.0</td>
+                <td>PCIe 4.0 provides higher bandwidth for graphics cards and NVMe SSDs</td>
+            </tr>
+            <tr>
+                <td>M.2 Slots</td>
+                <td>M.2 Gen4 Slot</td>
+                <td>M.2 Slot Gen3 Slot</td>
+                <td>Gen4 M.2 slot allows for faster NVMe SSDs, for faster data transfer</td>
+            </tr>
+            <tr>
+                <td>USB Ports</td>
+                <td>USB 3.2 Gen 2 and Gen 1 Ports</td>
+                <td>USB 3.1 / USB 2.0 Ports</td>
+                <td>Both have similar amount of ports</td>
+            </tr>
+            <tr>
+                <td>Audio</td>
+                <td>Realtek ALC897 7.1-Channel Audio Codec</td>
+                <td>Integrated Audio</td>
+                <td>Superior audio support for media</td>
+            </tr>
+            <tr>
+                <td>LAN</td>
+                <td>2.5 Gigabit LAN</td>
+                <td>Gigabit LAN</td>
+                <td>Faster network speeds with 2.5G LAN for faster online performance</td>
+            </tr>
+            <tr>
+                <td>BIOS</td>
+                <td>Click BIOS 5</td>
+                <td>BIOS APCN39WW</td>
+                <td>Better and user friendly BIOS version on new board</td>
+            </tr>
+            <tr>
+                <td>Expansion Slots</td>
+                <td>1 x PCIe 4.0 x16, 2 x PCIe 4.0 x1</td>
+                <td>Not specified</td>
+                <td>The slots on newer board support better GPU and SSD</td>
+            </tr>
+            <tr>
+                <td>Power Delivery</td>
+                <td>8+1+1 DrMOS Power Design</td>
+                <td>Not specified</td>
+                <td>Better power delivery system on newer board</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="margin-top: 20px;">
+    <button onclick="showSsdComparison()">Next (SSD)</button> <!-- Next page button -->
+	<button onclick="showCPUComparison()">Back (CPU)</button> <!-- Back to CPU Comparison -->
+	<button onclick="showOptions()">Back to options list</button>
+    <button onclick="showParentOptions()">Back to your options</button> <!-- Back to options -->
+	</div>
+</div>
+
+<!-- SSD Comparison Page -->
+<div id="ssd-comparison" class="section">
+    <h1>SSD Comparison</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Specification</th>
+                <th>Crucial P3 Plus 500GB</th>
+                <th>Intel SSDPEKKW010T8L 1TB</th>
+                <th>Why Crucial P3 Plus is better</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Capacity</td>
+                <td>500 GB</td>
+                <td>1 TB</td>
+                <td>Both can be used in new board</td>
+            </tr>
+            <tr>
+                <td>Interface</td>
+                <td>PCIe 4.0 NVMe</td>
+                <td>PCIe 3.0 NVMe</td>
+                <td>PCIe 4.0 offers faster data transfer rates c</td>
+            </tr>
+            <tr>
+                <td>Sequential Read Speed</td>
+                <td>Up to 4700 MB/s</td>
+                <td>Up to 1800 MB/s</td>
+                <td>P3 plus has faster transfer</td>
+            </tr>
+            <tr>
+                <td>Sequential Write Speed</td>
+                <td>Up to 3000 MB/s</td>
+                <td>Up to 1000 MB/s</td>
+                <td>3x faster write speed on new SSD</td>
+            </tr>
+            <tr>
+                <td>Form Factor</td>
+                <td>M.2 2280</td>
+                <td>M.2 2280</td>
+                <td>Same form factor allows use of both on new motherboard</td>
+            </tr>
+            <tr>
+                <td>Random Read IOPS</td>
+                <td>Up to 650,000 IOPS</td>
+                <td>Up to 350,000 IOPS</td>
+                <td>Higher random read IOPS for better performance</td>
+            </tr>
+            <tr>
+                <td>Random Write IOPS</td>
+                <td>Up to 700,000 IOPS</td>
+                <td>Up to 600,000 IOPS</td>
+                <td>Better performance in writing small files</td>
+            </tr>
+            <tr>
+                <td>Endurance (TBW)</td>
+                <td>300 TBW</td>
+                <td>240 TBW</td>
+                <td>Longer lifespan</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="margin-top: 20px;">
+	<button onclick="showRamComparison()">Next (Ram)</button>
+    <button onclick="showMotherboardComparison()">Previous (Motherboard)</button>
+	<button onclick="showOptions()">Back to options list</button>
+    <button onclick="showParentOptions()">Back to your options</button>
+	</div>
+</div>
+
+<!-- RAM Comparison Page -->
+<div id="ram-comparison" class="section">
+    <h1>RAM Comparison</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Specification</th>
+                <th>Crucial DDR5  2x8GB</th>
+                <th>Samsung/Micron 2x4GB DDR4 2600MHz RAM</th>
+                <th>Why use Crucial RAM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Capacity</td>
+                <td>16GB (2x8GB)</td>
+                <td>8GB (2x4GB)</td>
+                <td>More RAM capacity allows for better performance</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>DDR5</td>
+                <td>DDR4</td>
+                <td>DDR5 is 1.5x faster than DDR4</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>4800MHz</td>
+                <td>2600MHz</td>
+                <td>Higher speed results in better overall system performance</td>
+            </tr>
+            <tr>
+                <td>Latency</td>
+                <td>C40</td>
+                <td>C16</td>
+                <td>C40 is good latency for DDR5 and c16 is good for DDR4</td>
+            </tr>
+            <tr>
+                <td>Form Factor</td>
+                <td>DIMM</td>
+                <td>SODIMM</td>
+                <td>Compatible with new motherboard</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="margin-top: 20px;">
+	<button onclick="showInternetSpeedComparison()">Next (Internet)</button>
+    <button onclick="showSsdComparison()">Previous (SSD)</button>
+	<button onclick="showOptions()">Back to options list</button>
+    <button onclick="showParentOptions()">Back to your options</button>
+	</div>
+</div>
+
+<!-- Internet Speed Comparison Page -->
+<div id="internet-speed-comparison" class="section">
+    <h1>Internet Speed Comparison</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Specification</th>
+                <th>Cat 8 Ethernet Cable</th>
+                <th>Intel Wireless AC 9560</th>
+                <th>Why use ethernet cable</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Type</td>
+                <td>Wired Ethernet Cable</td>
+                <td>Wireless Network Adapter</td>
+                <td>Wired connection provides a more stable and high speed connection</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>Up to 40 Gbps</td>
+                <td>Up to 1.73 Gbps (Wi-Fi 5)</td>
+                <td>Significantly faster top speed of connection good for online tasks</td>
+            </tr>
+            <tr>
+                <td>Bandwidth</td>
+                <td>2000 MHz</td>
+                <td>80 MHz (160 MHz with dual-channel)</td>
+                <td>Higher bandwidth allows for faster data transmission</td>
+            </tr>
+            <tr>
+                <td>Connector Type</td>
+                <td>RJ45 Shielded Connector</td>
+                <td>M.2 2230/2280 (Key A/E)</td>
+                <td>Shielded connectors reduces mixing of data through cables</td>
+            </tr>
+            <tr>
+                <td>Latency</td>
+                <td>Minimal</td>
+                <td>Low (High in comparison to wired)</td>
+                <td>Lower latency is better for online tasks</td>
+            </tr>
+        </tbody>
+    </table>
+	<div style="margin-top: 20px;">
+	<button onclick="showEndingPage()">Next (Written text)</button>
+	<button onclick="showRamComparison()">Previous (RAM)</button>
+	<button onclick="showOptions()">Back to options list</button>
+    <button onclick="showParentOptions()">Back to your options</button>
+	</div>
+</div>
+
+<div id="ending-page-crap" class="section" style="text-align: left; font-size: 20px;">
+    <h2>Thank you for reading so far. Now, I will tell you why I want to build this computer. Without any crap, here are the reasons:</h2>
+    
+    <ul>
+        <li>My current laptop is fat just like the i-phone 6s due to battery issues. It is also very slow.</li>
+        <li>You may be wondering what would I do with this pc, well, this computer is so good (for me) that I will use it to do all the tasks I do right now on my laptop but on my computer and the pc will handle it better.</li>
+        <li>This pc will also be used for stuff that is far too heavy to be done on my old laptop. Like I will be able to play games on it, also if you think I will get addicted to games, don't worry, I'm a good boy :D.</li>
+        <li>Also even if you don't believe me, this pc has a very good price to performance ratio. The laptop I have is priced at around 62,999 (this is price at the time of writing this and don't think that this is an old laptop, I'm talking about upgraded specs). And this pc (at the time of writing) lies just a little more at 62,349. But if you compare both the performances, then the pc outperforms the poor laptop in every possible way.</li>
+        <li>Despite the similar prices, the PC outperforms the laptop in every possible way.</li>
+        <li>The only plus points of having a laptop over the pc are portability and battery. (पर नाही इस लैपटॉप को लदाख जाना हैं और नाही इस लैपटॉप का चार्जिंग के इलावा कोई इस्तेमाल हैं :D)</li>
+        <li>And also you keep wondering why when you come in the room and I go out with my laptop (trust me, it's not to hide anything, it's only to not disturb you, EVEN IF you are not in a call or not working, it is my duty as a son and you don't need to thank me 😊)</li>
+        <li>Also as I said to you last time, this laptop is a little too slow for stuff nowadays, so I just change the settings a little bit and you say I keep playing with the laptop and it gets destroyed. (I do the same on the mobile exploring stuff). But all the things I do are only done if I know what I'm doing. But that pc is soo blazing fast that I don't need to change any setting and the pc out of the box is fast enough to do anything.</li>
+        <li>And I also said that this laptop is not able to code. (You might be wondering how this is written, but you will get to know after this point what I'm talking about). I mean my laptop is not able to run Visual Studio which is a good program for coding and is my favourite compiler. That computer will handle VS Code like a beast and handle it EVEN WITH Chrome in the background. (Chrome is a RAM hogger, trust me.)</li>
+		<li>The PC will also run at a lower temparature as the GPU in the laptop are shrunk to fit into the laptop frame, to do this they remove the throttling part which is responsible for cooling. The same is for the cpu there is only thermal paste on it and no cpu cooler.</li>
+		<li>The PC will also be waayyy quieter than the laptop as the laptop has only 2 small fans attatched to heatsinks that cool all the parts including gpu , cpu, ssd, ram etc. And the speed of the coolers in the PC is also customisable, so that if you are doing a very small task, you can slow down the speed of the fans and reduce the noise.</li>
+		<li>The Monitor you have got me (Thanks for it, it is very good) is also held back because of my laptop, let me explain. The monitor you got me is capable of 4K UHD graphics and also HDR at 144Hz. But my laptop's HDMI port or my laptop's GPU and CPU are not capable of 4K or even 1440P at even 30Hz, and the laptop cannot even do 144Hz limiting my monitor to 60Hz, which is a waste isn't it?</li>
+		<li>Now we come to the main reasons, this computer is mainly being made because my grandmother wants me to build it.</li>
+		<li>Another reason is that I spent so much time making this code plssss 🥺</li>
+    </ul>
+
+    <!-- Buttons at the bottom -->
+    <div style="margin-top: 20px;">
+        <button onclick="showEndingPage1()">Next (Written text)</button>
+		<button onclick="showInternetSpeedComparison()">Previous (Internet)</button>
+        <button onclick="showOptions()">Back to options list</button>
+        <button onclick="showParentOptions()">Back to your options</button>
+    </div>
+</div>
+
+<div id="ending-page-nice" class="section" style="text-align: left; font-size: 20px;">
+<h2> You really thought that I would give a very badly constructed paragraph (the previous page) to convince you to buy me something worth OVER 60,000 Ruppees???? Well you would be wrong 😎😎👍👍</h2>
+<ul>
+<li>Good luck understanding this paragraph that resembles the exact same meaning as the last one.</li>
+<li>My current laptop resembles the bulkiness of an iPhone 6s suffering from battery issues, and it operates at an exasperatingly slow pace.</li>
+<li>You might be wondering what I'd use this new PC for. Well, it's so well-suited to my needs that I plan to carry out all my current laptop tasks on this desktop with much better efficiency and speed.</li>
+<li>This PC will also handle more demanding tasks that are beyond my old laptop's capabilities, like playing games. And before you worry about me getting addicted to gaming, rest assured, I can maintain discipline! 😄</li>
+<li>Even if you find it hard to believe, this PC offers an exceptional price-to-performance ratio. My laptop, which currently costs around ₹62,999 (with upgraded specs, no less), is priced comparably to this PC, which is priced at ₹62,349. Yet in terms of performance, the PC surpasses the laptop in every conceivable way.</li>
+<li>Despite similar price points, the PC clearly outperforms the laptop across the board.</li>
+<li>The only real advantages a laptop has over a PC are portability and battery life. (But let's be real, this laptop isn't going on a trek to Ladakh, nor is it good for anything other than staying plugged in! 😄)</li>
+<li>You often wonder why I leave the room with my laptop when you enter. Trust me, it’s not to hide anything! I just don't want to disturb you, whether you're working or not. It’s my duty as a considerate son, no need to thank me 😊.</li>
+<li>As I mentioned before, this laptop is lagging behind modern demands. Whenever I tweak the settings to make it run a little smoother, you say I’m damaging it by "playing with it" too much. (I do the same with my phone, exploring settings.) But rest assured, I know exactly what I’m doing. However, with this new PC, it's so fast straight out of the box that there’s no need to adjust anything—it will run flawlessly as is.</li>
+<li>I also mentioned before that this laptop struggles with coding. You might wonder how I managed to write this, but what I’m referring to is its inability to handle Visual Studio, my favorite coding software. This new PC will handle VS Code with ease—even with Chrome (a notorious RAM hog) running in the background.</li>
+<li>The PC will also run at much lower temperatures. In laptops, GPUs are downsized to fit into the compact frame, sacrificing throttling mechanisms that help with cooling. Similarly, the CPU is only coated with thermal paste, lacking a proper cooler.</li>
+<li>The PC will be significantly quieter too. Laptops rely on two small fans connected to heatsinks to cool all components, including the GPU, CPU, SSD, RAM, etc. In contrast, the fans in a PC are customizable, allowing me to reduce fan speed—and noise—during less demanding tasks.</li>
+<li>The monitor you got me (thank you, it's fantastic!) is also being held back by my laptop. Let me explain: The monitor is capable of 4K UHD resolution, HDR, and 144Hz refresh rates, but my laptop’s HDMI port, GPU, and CPU can’t handle 4K or even 1440p at 30Hz, let alone 144Hz, limiting the monitor to just 60Hz, which is such a waste, isn’t it?</li>
+<li>And now for the main reason: this computer is being built because Grandma wants me to build it. (And who can say no to Grandma?)</li>
+<li>Also, after all the time I’ve spent working on this code, I hope I deserve this upgrade, do I? 🥺</li>
+<li>Also, I don't think you will believe this but I wrote this paragraph completely on my own using my own vocabulary of words constructed from the english lexicon 😎</li>
+</ul>
+<div>
+<button onclick="showRecomendations()">Next (Recomendations)</button>
+<button onclick="showEndingPage()">Previous (Written text)</button>
+<button onclick="showOptions()">Back to options list</button>
+<button onclick="showParentOptions()">Back to your options</button>
+</div>
+</div>
+
+<div id ="Recomendation-page" class="section">
+<br><br><br>
+<h1>Here are some recomendations to further improve the build</h1>
+<table>
+        <thead>
+            <tr>
+                <th>Absolutely Recomended</th>
+                <th>Recomended</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Getting a CPU cooler</td>
+                <td>Getting 24gb RAM</td>
+            </tr>
+			<tr>
+                <td>I have chosen a CPU cooler that is 1500 Rupees and can reduce temparature of CPU upto 20 Degree's C. This will increase the life of the CPU by a lot. The Cooler also comes with thermal paste which is used for applying on CPU which with the cooler can further be more efficient in cooling. It is worth to increase my systems life with the extra 1500</td>
+                <td>I know 24gb RAM is a lot but for another 1500 Rupees we can get a lot more performance which is again very worth (In my opinion)</td>
+            </tr>
+			</tbody>
+			</table>
+			<h3>Also I can contribute some money from my piggy bank like about 1500 Rupees</h3>
+			<h2>Thanks for reading my code, hopefully you are convinced 🥺</h2>
+			<div>
+			<button onclick="showEndingPage1()">Previous (Written text 2)</button>
+			<button onclick="showOptions()">Back to options list</button>
+			<button onclick="ComputerEnd()">Parent Options</button>
+			
+</div>
+
+    <div id="back-exit" class="section">
+        <h2>What would you like to do next?</h2>
+        <button onclick="showParentOptions()">1. Go Back</button>
+        <button onclick="exitApp()">2. Exit</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
