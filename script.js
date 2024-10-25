@@ -1,13 +1,13 @@
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.classList.remove('visible'); // Remove visible class from all sections
+        section.classList.remove('visible');
     });
 
     const newSection = document.getElementById(sectionId);
-    newSection.classList.add('visible'); // Add the visible class
+    newSection.classList.add('visible');
 
-    // Smoothly scroll to the section
+    
     newSection.scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -32,7 +32,7 @@ function showCPUComparison() {
 }
 
 function showMotherboardComparison() {
-    // Replace 'next-page-id' with the actual ID of the next page you want to show.
+    
     showSection('motherboard-comparison'); 
 }
 
@@ -64,7 +64,7 @@ function showOptions() {
     showSection('navigation-buttons');
 }
 
-// Assuming showSection is defined to manage transitions
+
 
 function showBackExit() {
     showSection('back-exit');
@@ -72,7 +72,7 @@ function showBackExit() {
 
 function exitApp() {
     alert("Exiting the application. Goodbye!");
-    window.close(); // Attempt to close the current tab
+    window.close(); 
 }
 
 function ComputerEnd() {
@@ -83,7 +83,7 @@ function ComputerEnd() {
 function checkPasswordForMom() {
     var password = prompt("Please enter the password:");
     if (password === "MyMother!!") {
-        showMomOptions(); // Call your function to show the dad options
+        showMomOptions(); 
     } else {
         alert("Incorrect password. Please try again.");
     }
@@ -92,24 +92,21 @@ function checkPasswordForMom() {
 function checkPasswordForDad() {
     var password = prompt("Please enter the password:");
     if (password === "AbhishekMyFather") {
-        showDadOptions(); // Call your function to show the dad options
+        showDadOptions();
     } else {
         alert("Incorrect password. Please try again.");
     }
 }
 
-// Function to show the mom/dad options page
+
 function showMomOrDadOptions() {
-    // Your logic to display the mom or dad options goes here
-    // For example:
-    // document.getElementById("optionsPage").style.display = "block";
-    // Or update the content of the page to show the options
+    
     console.log("Redirecting to mom/dad options...");
 }
 
 
 
-// Initial fade-in effect for visible section
+
 document.addEventListener('DOMContentLoaded', () => {
     showSection('intro');
 });
