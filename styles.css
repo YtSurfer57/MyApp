@@ -1,27 +1,27 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Gradient background */
-    color: white; /* Text color for better visibility */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-    overflow: hidden; /* Prevent body scrolling */
+    height: 100vh; 
+    background: linear-gradient(to bottom, #6a11cb, #2575fc); 
+    color: white; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+    overflow: hidden; 
 }
 
 .section {
-    height: 100vh; /* Each section takes full height of the viewport */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Start as invisible */
-    transform: translateY(20px); /* Start slightly down */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation properties */
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Reset transform when visible */
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 button {
@@ -29,23 +29,23 @@ button {
     font-size: 18px;
     cursor: pointer;
     border: none;
-    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 123, 255, 0.8);
     color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    transition: background-color 0.3s ease, transform 0.2s ease, width 0.5s linear; /* Add width transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, transform 0.2s ease, width 0.5s linear; 
     width:150px;
-    min-width: 150px; /* Maintain minimum width */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow text */
-	margin-right: 25px; /* Adjust the value as needed */
+    min-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+	margin-right: 25px; 
 	margin-left: 25px;
 }
 
 button:hover {
     background-color: rgba(0, 56, 138, 0.9);
-    width: 250px; /* Expand button width by 50px on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    width: 250px; 
+    transform: translateY(-2px); 
 }
 
 h1, h2 {
@@ -61,46 +61,46 @@ p {
     padding: 0 20px;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 600px) {
     button {
-        width: 80%; /* Make buttons full width on small screens */
-        font-size: 16px; /* Adjust font size */
+        width: 80%; 
+        font-size: 16px; 
     }
     h1 {
-        font-size: 2em; /* Adjust heading size */
+        font-size: 2em; 
     }
     h2 {
-        font-size: 1.5em; /* Adjust subheading size */
+        font-size: 1.5em; 
     }
 }
 
-/* Ensure content scales on larger screens */
+
 @media (min-width: 600px) {
     button {
-        padding: 14px 28px; /* Increase button size */
-        font-size: 20px; /* Increase font size */
+        padding: 14px 28px; 
+        font-size: 20px;
     }
     h1 {
-        font-size: 3em; /* Adjust heading size */
+        font-size: 3em; 
     }
     h2 {
-        font-size: 2em; /* Adjust subheading size */
+        font-size: 2em;
     }
 }
 
 table {
-    width: 90%; /* Responsive width */
+    width: 90%; 
     margin: 20px 0;
-    border-collapse: collapse; /* Merge table borders */
+    border-collapse: collapse;
 }
 
 th, td {
     padding: 10px;
     text-align: center;
-    border: 1px solid white; /* Table border */
+    border: 1px solid white; /
 }
 
 th {
-    background-color: rgba(0, 123, 255, 0.7); /* Header background */
+    background-color: rgba(0, 123, 255, 0.7); 
 }
