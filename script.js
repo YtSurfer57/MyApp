@@ -89,10 +89,10 @@ function checkPasswordForMom() {
     }
 }
 
-function checkPasswordForMom() {
+function checkPasswordForDad() {
     var password = prompt("Please enter the password:");
     if (password === "AbhishekMyFather") {
-        showMomOptions(); // Call your function to show the dad options
+        showDadOptions(); // Call your function to show the dad options
     } else {
         alert("Incorrect password. Please try again.");
     }
